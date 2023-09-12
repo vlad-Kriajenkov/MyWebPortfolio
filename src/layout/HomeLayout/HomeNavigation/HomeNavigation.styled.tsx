@@ -16,7 +16,7 @@ export const Name = styled.p`
   border-left: 1px solid ${myColor.border.primary};
 
   border-top-left-radius: 10px;
-  width: 18.125rem;
+  width: 21rem;
   padding: 0.75rem 1rem;
 `;
 export const Nav = styled.nav`
