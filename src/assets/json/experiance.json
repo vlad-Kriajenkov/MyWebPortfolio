@@ -1,0 +1,50 @@
+{
+  "frilance": [
+    {
+      "positioned": "Junior Front-end Developer",
+      "time": "10.2021 — 02.2022",
+      "stac": [
+        "Vue",
+        " Vuex",
+        "JS",
+        "HTML",
+        "SASS",
+        "BEM",
+        "ECMA6",
+        "GitHub",
+        "i18next"
+      ],
+      "responsibility": [
+        "Creation onDescriptionItemne shop, for the product (Custom Furniture)",
+        "Creation Admin panel, for the product (Currency Exchange)"
+      ]
+    },
+    {
+      "positioned": "Junior Front-end Developer",
+      "time": "08.2023 - 10.2023",
+      "stac": [
+        "React",
+        "Canvas",
+        "JS",
+        "HTML",
+        "emotion/styled",
+        "ECMA6",
+        "GitHub",
+        "react-i18next"
+      ],
+      "responsibility": ["Creating a responsive website for the UK game"]
+    }
+  ],
+  "capecom": [
+    {
+      "positioned": "HTML-Developer",
+      "time": "02.2022 — 04.2023",
+      "stac": ["HTML", "JS", "jQuery", "SCSS", "BEM", "API"],
+      "responsibility": [
+        "Creating Lending",
+        "Site Optimization",
+        "Support for past projects"
+      ]
+    }
+  ]
+}
