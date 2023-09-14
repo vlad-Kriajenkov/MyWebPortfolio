@@ -18,6 +18,7 @@ export const Name = styled.p`
   border-top-left-radius: 10px;
   width: 21rem;
   padding: 0.75rem 1rem;
+  color: #5565e8;
 `;
 export const Nav = styled.nav`
   display: flex;
@@ -31,11 +32,11 @@ export const Nav = styled.nav`
   }
 `;
 export const Link = styled(NavLink)`
-  font-size: 0.9rem;;
+  font-size: 0.9rem;
   font-weight: 400;
   display: inline-block;
   text-align: center;
-  color: #607b96;
+  color: ${myColor.link.defoult};
   width: 10rem;
   padding: 0.75rem 1rem;
   border-left: 1px solid ${myColor.border.primary};
