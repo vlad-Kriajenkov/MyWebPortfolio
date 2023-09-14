@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { BiSolidDownArrow } from 'react-icons/bi';
-import { MenuDropdown } from 'components';
-import { MenuItem } from 'components/MenuItem/MenuItem';
+import { MenuDropdown, MenuItem } from 'components';
+
 import {
-  Conatiner,
+  Container,
   Title,
   WrapperMenu,
 } from './AboutProfessionalLayout.styled';
@@ -15,14 +15,14 @@ type Item = {
 };
 const experience: Item[] = [
   { patch: 'frilance', name: 'Frilance' },
-  { patch: 'cpacom', name: 'Cpaecom' },
+  { patch: 'cpaecom', name: 'Cpaecom' },
 ];
-const skills: Item[] = [{ patch: 'all', name: 'All' }];
+const skills: Item[] = [{ patch: 'skills', name: 'All' }];
 const certificates: Item[] = [{ patch: 'udemi', name: 'Udemi' }];
 const AboutProfessionalLayout = () => {
   return (
     <>
-      <Conatiner>
+      <Container>
         <Title>
           <BiSolidDownArrow />
           <p>professional-info</p>
@@ -46,7 +46,7 @@ const AboutProfessionalLayout = () => {
             ))}
           </MenuDropdown>
         </WrapperMenu>
-      </Conatiner>
+      </Container>
       <Outlet />
     </>
   );

@@ -11,7 +11,7 @@ export const Control = styled.button`
 
   background: none;
   border: none;
-  color: ${myColor.text.primary};
+  color: ${myColor.link.defoult};
   svg {
     margin-right: 5px;
     color: ${myColor.folder.primary};

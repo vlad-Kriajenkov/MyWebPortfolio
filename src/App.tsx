@@ -1,21 +1,22 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
+import { Container } from './App.styled';
 import { HomeLayout, AboutLayout, AboutProfessionalLayout } from './layout';
-import { AboutPersonal, AboutHobbies, Frilance } from 'page/about';
+import { AboutPersonal, AboutHobbies, Frilance, Cpaecom ,Skills} from 'page/about';
 import Home from './page/home/Home';
-// import About from 'page/about/About';
+ 
 
 function App() {
   return (
-    <div className="app">
+    <Container>
       <Routes>
         <Route path="/" element={<HomeLayout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<AboutLayout />}>
             <Route path="professional" element={<AboutProfessionalLayout />}>
               <Route path="frilance" element={<Frilance />} />
-              <Route path="skills" />
+              <Route path="cpaecom" element={<Cpaecom />} />
+              <Route path="skills"  element={<Skills/>}/>
               <Route path="certificates" />
             </Route>
             <Route path="personal" element={<AboutPersonal />} />
@@ -23,7 +24,7 @@ function App() {
           </Route>
         </Route>
       </Routes>
-    </div>
+    </Container>
   );
 }
 

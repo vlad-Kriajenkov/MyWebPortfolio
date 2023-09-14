@@ -1,10 +1,9 @@
 import styled from '@emotion/styled';
 import { myColor } from 'assets/colors/colors';
 
-export const Conatiner = styled.div`
-  width: 12.72rem;
+export const Container = styled.div`
+  width: 15.9rem;
   border-right: 1px solid ${myColor.border.primary};
-
 `;
 
 export const Title = styled.div`
@@ -19,6 +18,5 @@ export const Title = styled.div`
 `;
 
 export const WrapperMenu = styled.div`
-      padding: 0.6rem 0.5rem;
-      
-`
+  padding: 0.6rem 0.5rem;
+`;
