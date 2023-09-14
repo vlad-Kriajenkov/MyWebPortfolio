@@ -17,5 +17,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "src/img"]
+  "include": ["src", "src/img", "src/assets/img/skills"]
 }
