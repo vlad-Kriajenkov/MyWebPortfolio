@@ -1,9 +1,9 @@
 import React from 'react';
-import { Conatiner, ListMedia, Title, Link } from './homeFooter.styled';
+import { Container, ListMedia, Title, Link } from './homeFooter.styled';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 const HomeFooter = () => {
   return (
-    <Conatiner>
+    <Container>
       <Title>find me in:</Title>
       <ListMedia>
         <li>
@@ -22,7 +22,7 @@ const HomeFooter = () => {
           </Link>
         </li>
       </ListMedia>
-    </Conatiner>
+    </Container>
   );
 };
 export { HomeFooter };

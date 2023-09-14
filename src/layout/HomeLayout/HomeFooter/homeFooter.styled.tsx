@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { myColor } from 'assets/colors/colors';
 
-export const Conatiner = styled.div`
+export const Container = styled.div`
   font-size: 0.9rem;
   font-weight: 400;
 
@@ -15,12 +15,13 @@ export const ListMedia = styled.ul`
 
 export const Title = styled.p`
   padding: 0.75rem 1rem;
+  color: ${myColor.text.accent};
   border-right: 1px solid ${myColor.border.primary};
 `;
 
 export const Link = styled.a`
   display: block;
-  color: ${myColor.text.primary};
+  color: ${myColor.link.defoult};
   border-right: 1px solid ${myColor.border.primary};
   padding: 0px 10px;
   svg {
