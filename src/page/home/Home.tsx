@@ -1,13 +1,12 @@
 import React from 'react';
-import { Conatiner, About, Animation } from './home.styled';
+import { Container, About, Animation } from './home.styled';
 
-import animationLmeowrbk from 'assets/json/animation_lmeowrbk.json'
-import Lottie from "lottie-react";
-
+import animationLmeowrbk from 'assets/json/animation_lmeowrbk.json';
+import Lottie from 'lottie-react';
 
 const Home = () => {
   return (
-    <Conatiner>
+    <Container>
       <About>
         <p>Hi all. I am</p>
         <h1>Krajenkov Vladislav</h1>
@@ -15,10 +14,9 @@ const Home = () => {
         <p></p>
       </About>
       <Animation>
-     
-        <Lottie animationData={animationLmeowrbk}  loop={true}/>
+        <Lottie animationData={animationLmeowrbk} loop={true} />
       </Animation>
-    </Conatiner>
+    </Container>
   );
 };
 

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { myColor } from 'assets/colors/colors';
 import BackgroundBlurs from 'assets/img/home/BackgroundBlurs.png';
-export const Conatiner = styled.div`
+export const Container = styled.div`
   flex-grow: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
