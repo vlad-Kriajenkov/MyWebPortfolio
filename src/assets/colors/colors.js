@@ -2,7 +2,7 @@ export const myColor = {
   border: {
     primary: '#686a77',
     active: '#fea55f',
-    
+    iconPlanet: '#17380e',
   },
   text: {
     primary: '#607b96',
@@ -16,14 +16,13 @@ export const myColor = {
   },
   folder: {
     primary: '#fea55f',
-    seconder: "#607b96"
+    seconder: '#607b96',
   },
   backGraund: {
     body: '#010c15',
     main: '#2e2e39',
-    icon:{
-      skill: '#251C31'
-    }
+    icon: {
+      skill: '#251C31',
+    },
   },
- 
 };
