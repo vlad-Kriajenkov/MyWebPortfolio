@@ -1,5 +1,6 @@
 export * from './MenuDropdown';
 export * from './PageName';
 export * from './MenuItem';
-export * from './CardExperience';
+export * from './CardInfo';
 export * from './IconSkill';
+export * from './PageNameLayout';
