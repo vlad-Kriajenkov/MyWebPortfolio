@@ -1,7 +1,7 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
 import { Container, WrapperCard } from './Frilance.styled';
-import { CardExperience, PageName } from 'components';
+import { CardInfo, PageName } from 'components';
 import ExpData from 'assets/json/experiance.json';
 const Frilance = () => {
   const { frilance } = ExpData;
@@ -12,7 +12,7 @@ const Frilance = () => {
       <WrapperCard>
         {frilance.map(({ positioned, time, stac, responsibility }) => {
           return (
-            <CardExperience
+            <CardInfo
               key={nanoid()}
               positioned={positioned}
               time={time}
