@@ -1,15 +1,15 @@
 import React from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 import {
-  Card,
   Titile,
   Description,
   DescriptionList,
   DescriptionItem,
   ScilList,
   ScilItem,
-} from './CardExperience.styled';
+} from './CardInfo.styled';
 import { nanoid } from 'nanoid';
+import { CardWrap } from '../Card/Card.styled';
 
 type Props = {
   positioned: string;
@@ -18,9 +18,9 @@ type Props = {
   responsibility: string[];
 };
 
-const CardExperience = ({ positioned, time, stac, responsibility }: Props) => {
+const CardInfo = ({ positioned, time, stac, responsibility }: Props) => {
   return (
-    <Card>
+    <CardWrap>
       <span>
         <Titile>
           <FiChevronDown /> Position
@@ -54,8 +54,8 @@ const CardExperience = ({ positioned, time, stac, responsibility }: Props) => {
           })}
         </DescriptionList>
       </span>
-    </Card>
+    </CardWrap>
   );
 };
 
-export { CardExperience };
+export { CardInfo };
