@@ -19,10 +19,13 @@ export const LogoWrap = styled.div`
   justify-content: center;
   align-items: center;
 
+  cursor: pointer;
+
   width: 50px;
   height: 50px;
   background-color: ${myColor.backGraund.icon.skill};
   border-radius: 50%;
+  border: 1px solid ${myColor.border.iconPlanet};
   svg {
     width: 30px;
     height: 30px;
@@ -34,6 +37,7 @@ export const Info = styled.div`
   top: 0;
   left: 0;
   transform: translate(43px, 40px);
+  z-index: 1;
   width: max-content;
   padding: 5px 10px;
   color: ${myColor.text.accentExp};
