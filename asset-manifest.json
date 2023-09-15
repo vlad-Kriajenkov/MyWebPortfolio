@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/MyWebPortfolio/static/css/main.c4dee0dc.css",
-    "main.js": "/MyWebPortfolio/static/js/main.b3ec4d41.js",
+    "main.css": "/MyWebPortfolio/static/css/main.aa949b91.css",
+    "main.js": "/MyWebPortfolio/static/js/main.03d1decc.js",
+    "static/media/back.jpeg": "/MyWebPortfolio/static/media/back.9b0459a4dd6c1a12ed4f.jpeg",
+    "static/media/BackgroundBlurs.png": "/MyWebPortfolio/static/media/BackgroundBlurs.15df03238197eae8d20f.png",
+    "static/media/skills.png": "/MyWebPortfolio/static/media/skills.3844966c6ee10b38e119.png",
+    "static/media/UdemiJS.jpeg": "/MyWebPortfolio/static/media/UdemiJS.4c1e36905a2fa96928fa.jpeg",
+    "static/media/sprite.svg": "/MyWebPortfolio/static/media/sprite.cb9c7f604b7bd730d29a29b36a14ff2d.svg",
     "index.html": "/MyWebPortfolio/index.html",
-    "main.c4dee0dc.css.map": "/MyWebPortfolio/static/css/main.c4dee0dc.css.map",
-    "main.b3ec4d41.js.map": "/MyWebPortfolio/static/js/main.b3ec4d41.js.map"
+    "main.aa949b91.css.map": "/MyWebPortfolio/static/css/main.aa949b91.css.map",
+    "main.03d1decc.js.map": "/MyWebPortfolio/static/js/main.03d1decc.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4dee0dc.css",
-    "static/js/main.b3ec4d41.js"
+    "static/css/main.aa949b91.css",
+    "static/js/main.03d1decc.js"
   ]
 }
