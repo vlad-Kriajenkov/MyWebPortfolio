@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Conatainer = styled.div`
   display: flex;
-  height: 100%;
+  flex-grow: 1;
 `;
 
 export const Nav = styled.nav`
