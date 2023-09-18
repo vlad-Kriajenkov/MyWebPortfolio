@@ -1,6 +1,13 @@
 import { PageName } from 'components';
 import React, { useEffect, useState } from 'react';
-import { Wrapper } from './AboutMe.styled';
+import {
+  Container,
+  Number,
+  Title,
+  Text,
+  Wrapper,
+  List,
+} from './AboutMe.styled';
 const AboutMe = () => {
   const [arryNumber, setArryNumber] = useState<string[]>([]);
 
@@ -19,23 +26,48 @@ const AboutMe = () => {
   return (
     <>
       <PageName lable="About-me" />
-      <Wrapper>
-        <ul>
-          {arryNumber.map(item => {
-            return <li>{item}</li>;
-          })}
-        </ul>
-        <p>
-          About me I have 5 years of еxperience in web development lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur. Excepteur sint occaecat officia deserunt mollit
-          anim id est laborum.
-        </p>
-      </Wrapper>
+      <Container>
+        <Wrapper>
+          <Number>
+            {arryNumber.map(item => {
+              return <li>{item}</li>;
+            })}
+          </Number>
+
+          <div>
+            <Title> About me</Title>
+
+            <Text>
+              I have 1 year and 6 months of IT experience under my belt. During
+              this time I realized 3 projects on Freelance, two projects were
+              made for Ukraine, 1 for UK. More than a year worked in a company
+              on the position of HTML-Delevoper. I work fully on two frameworks
+              (Vue / React). In my spare time I do my own pet-projects
+            </Text>
+          </div>
+        </Wrapper>
+        <Wrapper>
+          <Number>
+            {arryNumber.map(item => {
+              return <li>{item}</li>;
+            })}
+          </Number>
+          <div>
+            <Title>SOFT SKILLS</Title>
+            <List>
+              <li>Teamwork</li>
+              <li>Eager to learn</li>
+              <li>Inquisitive</li>
+              <li>Versatile</li>
+            </List>
+            <Title>LANGUAGE SKILLS</Title>
+            <List>
+              <li>Ukrainian - native</li>
+              <li>English- Elementary(A2+)</li>
+            </List>
+          </div>
+        </Wrapper>
+      </Container>
     </>
   );
 };
