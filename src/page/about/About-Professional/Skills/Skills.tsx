@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, SkillAll, Wrapper,Back } from './Skills.styled';
+import { Container, SkillAll, Wrapper, Back } from './Skills.styled';
 import { IconSkill, PageName } from 'components';
 import skillsData from 'assets/json/skills.json';
 import { nanoid } from 'nanoid';
