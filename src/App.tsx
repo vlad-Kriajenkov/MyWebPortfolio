@@ -7,10 +7,11 @@ import {
   AboutProfessionalLayout,
   AboutPersonalLayout,
 } from './layout';
-import { AboutHobbies, Frilance, Cpaecom, Skills } from 'page/about';
+import { Frilance, Cpaecom, Skills } from 'page/about';
 import Home from './page/home/Home';
 import { Certificates } from 'page/about/About-Professional/Certificates/Certificates';
 import AboutMe from 'page/about/About-Personal/About-me/AboutMe';
+import Projets from 'page/Projects/Projects';
 
 function App() {
   return (
@@ -28,7 +29,9 @@ function App() {
             <Route path="personal" element={<AboutPersonalLayout />}>
               <Route path="about_me" element={<AboutMe />} />
             </Route>
-            <Route path="hobbies" element={<AboutHobbies />} />
+          </Route>
+          <Route path="progect" element={<AboutLayout />}>
+            <Route index element={<Projets />} />
           </Route>
         </Route>
       </Routes>
