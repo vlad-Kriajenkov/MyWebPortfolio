@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import { Container, Title, WrapperMenu } from './PageNameLayout.styled';
+import { Container, Title, WrapperMenu,WrapperLayout } from './PageNameLayout.styled';
 import { BiSolidDownArrow } from 'react-icons/bi';
 import { Outlet } from 'react-router';
 type Props = {
@@ -17,9 +17,9 @@ const PageNameLayout = (props: PropsWithChildren<Props>) => {
         </Title>
         <WrapperMenu>{children}</WrapperMenu>
       </Container>
-      <div style={{ width: '100%' }}>
+      <WrapperLayout >
         <Outlet />
-      </div>
+      </WrapperLayout>
     </>
   );
 };

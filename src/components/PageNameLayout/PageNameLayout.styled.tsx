@@ -20,4 +20,9 @@ export const Title = styled.div`
 export const WrapperMenu = styled.div`
   padding: 0.6rem 0.5rem;
 `;
- 
+
+export const WrapperLayout = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
