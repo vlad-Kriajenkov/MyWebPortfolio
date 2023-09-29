@@ -30,9 +30,9 @@ function App() {
               <Route path="about_me" element={<AboutMe />} />
             </Route>
           </Route>
-          <Route path="progect" element={<AboutLayout />}>
-            <Route index element={<Projets />} />
-          </Route>
+          <Route path="progect" element={<Projets />} />
+          <Route path="progect/:id" element={<Projets />} />
+
         </Route>
       </Routes>
     </Container>
