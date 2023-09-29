@@ -13,6 +13,8 @@ export const myColor = {
   link: {
     defoult: '#c3b1bd ',
     active: '#686a77',
+    backGraund: '#1C2B3A',
+    white: '#fff',
   },
   folder: {
     primary: '#fea55f',
@@ -24,5 +26,8 @@ export const myColor = {
     icon: {
       skill: '#251C31',
     },
+  },
+  icon: {
+    backGraund: '#86e1f9',
   },
 };
