@@ -1,12 +1,18 @@
 import React, { PropsWithChildren } from 'react';
-import { Container, Title, WrapperMenu,WrapperLayout } from './PageNameLayout.styled';
+import {
+  Container,
+  Title,
+  WrapperMenu,
+  WrapperLayout,
+} from './PageNameLayout.styled';
 import { BiSolidDownArrow } from 'react-icons/bi';
 import { Outlet } from 'react-router';
 type Props = {
   name: string;
+  outlet?: boolean;
 };
 const PageNameLayout = (props: PropsWithChildren<Props>) => {
-  const { children, name } = props;
+  const { children, name, outlet } = props;
 
   return (
     <>
@@ -17,9 +23,13 @@ const PageNameLayout = (props: PropsWithChildren<Props>) => {
         </Title>
         <WrapperMenu>{children}</WrapperMenu>
       </Container>
-      <WrapperLayout >
-        <Outlet />
-      </WrapperLayout>
+      {outlet ? (
+        <WrapperLayout>
+          <Outlet />
+        </WrapperLayout>
+      ) : (
+        <></>
+      )}
     </>
   );
 };
