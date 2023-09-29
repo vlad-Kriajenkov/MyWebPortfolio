@@ -1,65 +1,36 @@
-import { CheckBox, PageNameLayout } from 'components';
-import { log } from 'console';
-import React, { useState } from 'react';
-
+import { CardProject, CheckBox, PageNameLayout } from 'components';
+import { Container, WrapperProject, Box } from './Projects.styled';
+import React, { useCallback, useEffect, useState } from 'react';
+import IconArrya from 'assets/json/icon.json';
+import ProjectArrya from 'assets/json/project.json';
 const Projets = () => {
-  const Arry = [
-    {
-      name: 'BEM',
-      nameIcon: '#icon-Bem',
-    },
-    {
-      name: 'HTML5',
-      nameIcon: '#icon-Html5',
-    },
-    {
-      name: 'JavaScripr',
-      nameIcon: '#icon-Js',
-    },
-    {
-      name: 'TypeScript',
-      nameIcon: '#icon-Typescript',
-    },
-    {
-      name: 'jQuery',
-      nameIcon: '#icon-jQuery',
-    },
-    {
-      name: 'React',
-      nameIcon: '#icon-React',
-    },
-    {
-      name: 'MUI',
-      nameIcon: '#icon-Mui',
-    },
-    {
-      name: 'Vue',
-      nameIcon: '#icon-Vue',
-    },
-    {
-      name: 'Mongodb',
-      nameIcon: '#icon-Mongodb',
-    },
-    {
-      name: 'Nodejs',
-      nameIcon: '#icon-Nodejs',
-    },
-  ];
+  const [filterSetings, setFilterSetings] = useState<string[]>([]);
 
-  const [filterSetings, setFilterSetings] = useState(['']);
+  const handelEven = useCallback(
+    (nameFilter: string) => {
+      const filterDublicate = filterSetings.includes(nameFilter);
+      if (filterDublicate) {
+        setFilterSetings(filterSetings.filter(item => item !== nameFilter));
+        return;
+      } else {
+        setFilterSetings([...filterSetings, nameFilter]);
+        return;
+      }
+    },
+    [filterSetings]
+  );
 
-  const handelEven = (name: string) => {
-    const newFilter = filterSetings.filter(item => item !== name)
-    
-    setFilterSetings(newFilter);
-  };
-
-  console.log(filterSetings);
+  useEffect(() => {
+    ProjectArrya.map(({ info }) => {
+      console.log(info.technology);
+      console.log(filterSetings);
+    });
+  }, [filterSetings]);
 
   return (
-    <>
+    <Container>
       <PageNameLayout name="projets-info">
-        {Arry.map(({ name, nameIcon }) => {
+        {IconArrya.map(({ name, nameIcon }) => {
           return (
             <CheckBox
               key={name}
@@ -71,8 +42,16 @@ const Projets = () => {
         })}
       </PageNameLayout>
 
-      {filterSetings}
-    </>
+      <WrapperProject>
+        {ProjectArrya.map(({ id, nameProject, info }) => {
+          return (
+            <Box key={id}>
+              <CardProject id={id} nameProject={nameProject} info={info} />
+            </Box>
+          );
+        })}
+      </WrapperProject>
+    </Container>
   );
 };
 export default Projets;
