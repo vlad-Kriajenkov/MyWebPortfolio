@@ -5,7 +5,7 @@ import React from 'react';
 const AboutPersonalLayout = () => {
   return (
     <>
-      <PageNameLayout name="personal-info">
+      <PageNameLayout name="personal-info" outlet={true}>
         <MenuDropdown lable="About-me">
           <MenuItem patch="about_me" name="About-me" />
         </MenuDropdown>

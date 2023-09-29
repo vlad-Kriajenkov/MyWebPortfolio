@@ -15,7 +15,7 @@ const certificates: Item[] = [{ patch: 'certificates', name: 'Certificates' }];
 const AboutProfessionalLayout = () => {
   return (
     <>
-      <PageNameLayout name="professional-info">
+      <PageNameLayout name="professional-info" outlet={true}>
         <MenuDropdown lable="experience">
           {experience.map(({ patch, name }) => (
             <MenuItem key={name} patch={patch} name={name}></MenuItem>
