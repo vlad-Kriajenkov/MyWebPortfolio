@@ -1,0 +1,42 @@
+[
+  {
+    "name": "BEM",
+    "nameIcon": "#icon-Bem"
+  },
+  {
+    "name": "HTML5",
+    "nameIcon": "#icon-Html5"
+  },
+  {
+    "name": "JavaScripr",
+    "nameIcon": "#icon-Js"
+  },
+  {
+    "name": "TypeScript",
+    "nameIcon": "#icon-Typescript"
+  },
+  {
+    "name": "jQuery",
+    "nameIcon": "#icon-jQuery"
+  },
+  {
+    "name": "React",
+    "nameIcon": "#icon-React"
+  },
+  {
+    "name": "MUI",
+    "nameIcon": "#icon-Mui"
+  },
+  {
+    "name": "Vue",
+    "nameIcon": "#icon-Vue"
+  },
+  {
+    "name": "Mongodb",
+    "nameIcon": "#icon-Mongodb"
+  },
+  {
+    "name": "Nodejs",
+    "nameIcon": "#icon-Nodejs"
+  }
+]

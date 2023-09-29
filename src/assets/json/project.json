@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "nameProject": "Your Contact Book",
+    "about": "Application for storing contacts. Implemented user registration, interaction with contacts on the server, displaying information about the user.",
+    "info": {
+      "frameWork": "react",
+      "technology": [
+        "React",
+        "Redux Toolkit",
+        "RTK Query",
+        "TypeScript",
+        "Emotion",
+        "MUI",
+        "Momentjs",
+        "react-router-dom",
+        "Notiflix",
+        "axios"
+      ],
+      "linkGit": "https://github.com/vlad-Kriajenkov/ts-your-contactbook",
+      "linkWeb": "https://vlad-kriajenkov.github.io/ts-your-contactbook/"
+    }
+  },
+  {
+    "id": 2,
+    "nameProject": "Sain Stream",
+    "about": "The application for viewing movie information. Implemented search movies by name. Showing the top movies of the week on the home page. View detailed information about the movie, including the cast and critics' comments.",
+    "info": {
+      "frameWork": "react",
+      "technology": ["React", "Emotion", "MUI", "react-router-dom", "axios"],
+      "linkGit": "https://github.com/vlad-Kriajenkov/sain-stream",
+      "linkWeb": "https://vlad-kriajenkov.github.io/sain-stream/"
+    }
+  },
+  {
+    "id": 3,
+    "nameProject": "Qvarta",
+    "about": "Dana project was realized for online store branded furniture. In this project realized two interface languages, smooth animations, linking to google map, automatic transition through the page.",
+    "info": {
+      "frameWork": "Vue",
+      "technology": [
+        "Vue",
+        "Vuex",
+        "Vue2-google-maps",
+        "Vue-i18n",
+        "Vue-slick",
+        "Vue-video-player"
+      ],
+      "linkGit": "",
+      "linkWeb": "https://github.com/vlad-Kriajenkov/qvarta-01"
+    }
+  }
+]
