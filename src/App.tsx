@@ -12,7 +12,7 @@ import Home from './page/home/Home';
 import { Certificates } from 'page/about/About-Professional/Certificates/Certificates';
 import AboutMe from 'page/about/About-Personal/About-me/AboutMe';
 import Projets from 'page/Projects/Projects';
-
+import ProjectID from 'page/Projects/ProjectID/ProjectID'
 function App() {
   return (
     <Container>
@@ -31,7 +31,7 @@ function App() {
             </Route>
           </Route>
           <Route path="progect" element={<Projets />} />
-          <Route path="progect/:id" element={<Projets />} />
+          <Route path="progect/:id" element={<ProjectID />} />
 
         </Route>
       </Routes>
