@@ -11,7 +11,6 @@ const Home = () => {
         <p>Hi all. I am</p>
         <h1>Krajenkov Vladislav</h1>
         <h2> &gt; Junior Front-end Developer</h2>
-        <p></p>
       </About>
       <Animation>
         <Lottie animationData={animationLmeowrbk} loop={true} />
