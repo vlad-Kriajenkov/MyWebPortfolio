@@ -19,7 +19,7 @@ interface Item {
 const Projets = () => {
   const [filterSetings, setFilterSetings] = useState<string[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<Item[]>([]);
-  const [check, setCheck] = useState(false);
+  // const [check, setCheck] = useState(false);
 
   const handelEven = useCallback(
     (nameFilter: string) => {
@@ -53,7 +53,7 @@ const Projets = () => {
           return (
             <CheckBox
               key={name}
-              lable={name}
+              label={name}
               idIcon={nameIcon}
               handelEven={handelEven}
             />
