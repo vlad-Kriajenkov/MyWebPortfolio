@@ -51,7 +51,7 @@ export const Nav = styled.nav`
     position: absolute;
     top: -100dvh;
     left: 0;
-
+    z-index: 2;
     flex-direction: column;
     height: 85dvh;
     background-color: ${myColor.backGraund.main};
@@ -62,7 +62,8 @@ export const Nav = styled.nav`
       margin-left: 0px;
     }
     &.active {
-      transform: translateY(107.1dvh);
+      transform: translateY(106dvh);
+     
     }
   }
 `;

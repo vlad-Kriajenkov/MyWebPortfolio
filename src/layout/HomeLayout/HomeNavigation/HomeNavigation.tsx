@@ -13,11 +13,17 @@ import { useMediaQuery } from 'react-responsive';
 const HomeNavigation = () => {
   const [handelBurger, setHandelBurger] = useState(false);
   const isMobile = useMediaQuery({ query: '(max-width: 420px)' });
+  const bodyEl = document.getElementsByTagName('body')[0];
   const hadelMenu = () => {
     setHandelBurger(!handelBurger);
+
+    handelBurger === true
+      ? (bodyEl.style.overflowY = 'auto')
+      : (bodyEl.style.overflowY = 'hidden');
   };
   const closeBurger = () => {
     setHandelBurger(false);
+    bodyEl.style.overflowY = 'auto';
   };
 
   if (isMobile) {
