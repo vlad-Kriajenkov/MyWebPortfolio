@@ -4,6 +4,10 @@ import { myColor } from 'assets/colors/colors';
 export const Container = styled.div`
   width: 15.9rem;
   border-right: 1px solid ${myColor.border.primary};
+
+  @media screen and (max-width: 420px) {
+    width: 100%;
+  }
 `;
 
 export const Title = styled.div`

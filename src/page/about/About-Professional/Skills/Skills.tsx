@@ -14,7 +14,7 @@ const Skills = () => {
             {skillsData.map(({ name, nameIcon, top, left }) => {
               return (
                 <IconSkill
-                  key={nanoid()}
+                  key={nanoid()} 
                   name={name}
                   idIcon={nameIcon}
                   top={top}

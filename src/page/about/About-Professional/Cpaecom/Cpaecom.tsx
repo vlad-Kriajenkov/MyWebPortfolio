@@ -8,7 +8,7 @@ const Cpaecom = () => {
 
   return (
     <Container>
-      <PageName lable="Cpaecom" />
+      <PageName lable="Cpaecom" /> 
       <WrapperCard>
         {capecom.map(({ positioned, time, stac, responsibility }) => {
           return (

@@ -1,6 +1,8 @@
 import { PageName } from 'components';
 import React, { useEffect, useState } from 'react';
+import { nanoid } from 'nanoid';
 import {
+  FlexBox,
   Container,
   Number,
   Title,
@@ -24,13 +26,13 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <>
-      <PageName lable="About-me" />
+    <FlexBox>
+      <PageName lable="About-me"   />
       <Container>
         <Wrapper>
-          <Number>
+          <Number >
             {arryNumber.map(item => {
-              return <li>{item}</li>;
+              return <li key={nanoid()}>{item}</li>;
             })}
           </Number>
 
@@ -49,7 +51,7 @@ const AboutMe = () => {
         <Wrapper>
           <Number>
             {arryNumber.map(item => {
-              return <li>{item}</li>;
+              return <li key={nanoid()}>{item}</li>;
             })}
           </Number>
           <div>
@@ -68,7 +70,7 @@ const AboutMe = () => {
           </div>
         </Wrapper>
       </Container>
-    </>
+    </FlexBox>
   );
 };
 

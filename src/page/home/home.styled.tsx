@@ -7,6 +7,7 @@ export const Container = styled.div`
   grid-template-columns: 1fr 1fr;
 
   @media screen and (max-width: 420px) {
+    /* height: 100%; */
     grid-template-columns: 1fr;
     background-image: url(${BackgroundBlurs});
     background-position: center;

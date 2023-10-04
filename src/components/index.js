@@ -6,3 +6,4 @@ export * from './IconSkill';
 export * from './PageNameLayout';
 export * from './CheckBox';
 export * from './CardProject';
+export * from './MenuGroups';

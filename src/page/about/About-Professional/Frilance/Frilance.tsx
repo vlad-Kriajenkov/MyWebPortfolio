@@ -23,7 +23,7 @@ const Frilance = () => {
         })}
       </WrapperCard>
     </Container>
-  );
+  ); 
 };
 
 export { Frilance };

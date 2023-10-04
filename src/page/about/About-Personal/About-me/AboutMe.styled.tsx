@@ -1,16 +1,32 @@
 import styled from '@emotion/styled';
 import { myColor } from 'assets/colors/colors';
+export const FlexBox = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  flex-grow: 1;
+  height: 100%;
+  @media screen and (max-width: 420px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
-
-  border-right: 1px solid red;
+  :first-of-type {
+    border-right: 1px solid ${myColor.border.primary};
+  }
+  @media screen and (max-width: 420px) {
+    :first-of-type {
+    border-right: none;
+    border-bottom: 1px solid ${myColor.border.primary};
+  }
+  }
 `;
 export const Number = styled.ul`
   color: ${myColor.text.primary};

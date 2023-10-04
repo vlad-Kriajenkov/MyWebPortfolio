@@ -4,6 +4,9 @@ import { myColor } from 'assets/colors/colors';
 export const Cotainer = styled.div`
   width: 100%;
   border-bottom: 1px solid ${myColor.border.primary};
+  @media screen and (max-width:420px){
+    border-top: 1px solid ${myColor.border.primary};
+  }
 `;
 export const PageWrapper = styled.div`
   display: flex;

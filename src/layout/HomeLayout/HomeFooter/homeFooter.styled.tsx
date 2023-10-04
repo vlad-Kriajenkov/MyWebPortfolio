@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { myColor } from 'assets/colors/colors';
 
-export const Container = styled.div`
+export const Container = styled.footer`
   font-size: 0.9rem;
   font-weight: 400;
 

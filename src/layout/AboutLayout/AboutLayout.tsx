@@ -4,7 +4,10 @@ import { Outlet } from 'react-router';
 import { MdFolderShared, MdFolderSpecial } from 'react-icons/md';
 
 import { Conatainer, Nav, Link } from './AboutLayout.styles';
+
+ 
 const AboutLayout = () => {
+ 
   return (
     <Conatainer>
       <Nav>

@@ -12,4 +12,11 @@ export const WrapperCard = styled.div`
   div {
     width: calc((100% - 20px) / 2);
   }
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+    div {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
 `;

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 import { myColor } from 'assets/colors/colors';
-export const Wrapper = styled.div`
+export const Wrapper = styled.header`
   position: relative;
   display: flex;
 
@@ -62,7 +62,6 @@ export const Nav = styled.nav`
       margin-left: 0px;
     }
     &.active {
-   
       transform: translateY(107.1dvh);
     }
   }

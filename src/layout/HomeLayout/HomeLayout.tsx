@@ -5,15 +5,11 @@ import { HomeNavigation, HomeFooter } from './index';
 const HomeLayout = () => {
   return (
     <Conatainer>
-      <header>
-        <HomeNavigation />
-      </header>
-
-      <Outlet />
-
-      <footer>
-        <HomeFooter />
-      </footer>
+      <HomeNavigation />
+      <main>
+        <Outlet />
+      </main>
+      <HomeFooter />
     </Conatainer>
   );
 };

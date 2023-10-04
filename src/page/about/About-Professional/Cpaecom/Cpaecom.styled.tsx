@@ -12,4 +12,10 @@ export const WrapperCard = styled.div`
   div {
     width: calc((100% - 20px) / 2);
   }
+
+  @media screen and (max-width: 420px) {
+    div {
+      width: 100%;
+    }
+  }
 `;

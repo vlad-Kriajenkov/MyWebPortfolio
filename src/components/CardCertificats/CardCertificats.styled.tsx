@@ -12,11 +12,11 @@ export const InfoList = styled.ul`
 
   line-height: 1.5rem;
   li {
-    display: flex;
+    display: grid;
+    grid-template-columns: 120px 1fr;
     align-items: center;
     p {
       color: ${myColor.text.accentExp};
-      width: 24%;
     }
   }
 `;
