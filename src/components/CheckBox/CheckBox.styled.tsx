@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { myColor } from 'assets/colors/colors';
- 
+
 export const Wrapper = styled.div`
   input[type='checkbox'] {
     /* removing default appearance */
@@ -14,7 +14,6 @@ export const Wrapper = styled.div`
     border: 0.15em solid #607b96;
     outline: none;
     cursor: pointer;
-
   }
 
   .checked {
@@ -35,13 +34,20 @@ export const Wrapper = styled.div`
   color: ${myColor.text.primary};
 `;
 
-export const Lable = styled.label`
+export const Label = styled.label`
   display: flex;
   font-size: 1rem;
   align-items: center;
   height: 1.2rem;
   svg {
     width: 1.5rem;
+    height: 1.5rem;
     margin-right: 0.62rem;
+  }
+`;
+
+export const NameLabel = styled.p`
+  @media screen and (max-width: 420px) {
+    display: none;
   }
 `;

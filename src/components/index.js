@@ -7,3 +7,4 @@ export * from './PageNameLayout';
 export * from './CheckBox';
 export * from './CardProject';
 export * from './MenuGroups';
+export * from './Card';

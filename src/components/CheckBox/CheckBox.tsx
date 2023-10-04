@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import Sprite from 'assets/img/skills/sprite.svg';
-import { Wrapper, Lable } from './CheckBox.styled';
+import { Wrapper, Label } from './CheckBox.styled';
 type Props = {
-  lable: string;
+  label: string;
   idIcon: string;
   handelEven: any;
 };
 const CheckBox = (props: Props) => {
-  const { lable, idIcon, handelEven } = props;
+  const { label, idIcon, handelEven } = props;
   const [isChecked, setChecked] = useState(false);
 
   return (
-    <Wrapper onClick={() => handelEven(lable)}>
-      <Lable>
+    <Wrapper onClick={() => handelEven(label)}>
+      <Label>
         <input
           className={isChecked ? 'checked' : ''}
           type="checkbox"
@@ -21,8 +21,8 @@ const CheckBox = (props: Props) => {
         <svg>
           <use href={Sprite + `${idIcon}`}></use>
         </svg>
-        {lable}
-      </Lable>
+        {label}
+      </Label>
     </Wrapper>
   );
 };
