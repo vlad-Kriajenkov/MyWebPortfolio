@@ -1,17 +1,6 @@
-import { MenuDropdown, MenuItem, PageNameLayout } from 'components';
-import React from 'react';
- 
-
+import { MenuGroups } from 'components';
+import linkPersonal from 'assets/json/linkPersonal.json';
 const AboutPersonalLayout = () => {
-  return (
-    <>
-      <PageNameLayout name="personal-info" outlet={true}>
-        <MenuDropdown lable="About-me">
-          <MenuItem patch="about_me" name="About-me" />
-        </MenuDropdown>
-      </PageNameLayout>
-      
-    </>
-  );
+  return <MenuGroups linkArray={linkPersonal} lable='personl-info'/>;
 };
 export { AboutPersonalLayout };
