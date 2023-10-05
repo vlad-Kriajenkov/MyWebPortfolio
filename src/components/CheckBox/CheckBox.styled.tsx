@@ -47,7 +47,7 @@ export const Label = styled.label`
 `;
 
 export const NameLabel = styled.p`
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 426px) {
     display: none;
   }
 `;
