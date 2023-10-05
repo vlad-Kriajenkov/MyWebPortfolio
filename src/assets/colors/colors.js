@@ -9,6 +9,7 @@ export const myColor = {
     seconder: '#E5E9F0',
     accent: '#5565E8',
     accentExp: '#fea55f',
+    white: '#fff',
   },
   link: {
     defoult: '#c3b1bd ',
