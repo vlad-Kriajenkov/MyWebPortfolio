@@ -4,16 +4,34 @@ import { myColor } from 'assets/colors/colors';
 export const Container = styled.div`
   display: flex;
   flex-grow: 1;
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+  }
+`;
+
+export const WrapperFilter = styled.div`
+  border-right: 1px solid ${myColor.border.primary};
+`;
+
+export const WrapperCgeckBox = styled.div`
+  padding: 1rem;
+  @media screen and (max-width: 420px) {
+    border-bottom: 1px solid ${myColor.border.primary};
+  }
 `;
 export const WrapperProject = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   width: 100%;
-  padding: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @media screen and (max-width: 420px) {
+    grid-template-columns: 1fr;
+  }
 `;
 export const Box = styled.div`
-  width: calc((100% - 30px) / 3);
+  padding: 1rem;
+  flex-direction: row-reverse;
 `;
 
 export const Info = styled.div`

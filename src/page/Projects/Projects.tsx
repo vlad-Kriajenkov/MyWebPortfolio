@@ -1,5 +1,12 @@
-import { CardProject, CheckBox, PageNameLayout } from 'components';
-import { Container, WrapperProject, Box, Info } from './Projects.styled';
+import { CardProject, CheckBox, MenuDropdown } from 'components';
+import {
+  Container,
+  WrapperProject,
+  Box,
+  Info,
+  WrapperFilter,
+  WrapperCgeckBox,
+} from './Projects.styled';
 import React, { useCallback, useEffect, useState } from 'react';
 import IconArrya from 'assets/json/icon.json';
 import ProjectArrya from 'assets/json/project.json';
@@ -19,7 +26,6 @@ interface Item {
 const Projets = () => {
   const [filterSetings, setFilterSetings] = useState<string[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<Item[]>([]);
-  // const [check, setCheck] = useState(false);
 
   const handelEven = useCallback(
     (nameFilter: string) => {
@@ -48,18 +54,28 @@ const Projets = () => {
 
   return (
     <Container>
-      <PageNameLayout name="projets-info">
-        {IconArrya.map(({ name, nameIcon }) => {
-          return (
-            <CheckBox
-              key={name}
-              label={name}
-              idIcon={nameIcon}
-              handelEven={handelEven}
-            />
-          );
-        })}
-      </PageNameLayout>
+      <WrapperFilter>
+        <MenuDropdown
+          lable="projets-info"
+          titlePageLink={true}
+          typeLinks={true}
+        >
+          <WrapperCgeckBox>
+            {IconArrya.map(({ name, nameIcon }) => {
+              return (
+                <CheckBox
+                  key={name}
+                  label={name}
+                  idIcon={nameIcon}
+                  handelEven={handelEven}
+                />
+              );
+            })}
+          </WrapperCgeckBox>
+        </MenuDropdown>
+      </WrapperFilter>
+
+      {/* <PageNameLayout name="projets-info"></PageNameLayout> */}
 
       <WrapperProject>
         {filterSetings.length === 0 ? (
