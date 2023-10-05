@@ -1,5 +1,5 @@
-import { PageName } from 'components';
 import React, { useEffect, useState } from 'react';
+import { ButtonBack } from 'components';
 import { nanoid } from 'nanoid';
 import {
   FlexBox,
@@ -27,10 +27,10 @@ const AboutMe = () => {
 
   return (
     <FlexBox>
-      <PageName lable="About-me"   />
+      <ButtonBack contentText="About-me" />
       <Container>
         <Wrapper>
-          <Number >
+          <Number>
             {arryNumber.map(item => {
               return <li key={nanoid()}>{item}</li>;
             })}

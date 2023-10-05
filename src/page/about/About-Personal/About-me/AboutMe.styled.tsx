@@ -9,7 +9,7 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100%;
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 426px) {
     display: flex;
     flex-direction: column;
   }
@@ -21,11 +21,11 @@ export const Wrapper = styled.div`
   :first-of-type {
     border-right: 1px solid ${myColor.border.primary};
   }
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 426px) {
     :first-of-type {
-    border-right: none;
-    border-bottom: 1px solid ${myColor.border.primary};
-  }
+      border-right: none;
+      border-bottom: 1px solid ${myColor.border.primary};
+    }
   }
 `;
 export const Number = styled.ul`

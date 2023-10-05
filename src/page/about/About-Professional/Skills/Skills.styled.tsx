@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { myColor } from 'assets/colors/colors';
 import Space from 'assets/img/home/skills.png';
 import BackImg from 'assets/img/skills/back.jpeg';
 
@@ -11,14 +12,14 @@ export const Container = styled.div`
 
 export const Back = styled.div`
   flex: 1 0 auto;
-
+  border-top: 1px solid ${myColor.border.primary};
   background-image: url(${BackImg});
   background-repeat: no-repeat;
   background-size: cover;
 `;
 
 export const SkillAll = styled.div`
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   background-image: url(${Space});
   background-repeat: no-repeat;
@@ -32,13 +33,22 @@ export const Wrapper = styled.div`
 
   transform: translate(-50%, -43%);
   position: relative;
-  width: 933px;
+  max-width: 933px;
   height: 300px;
 `;
 
 export const FlexBox = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  @media screen and (max-width: 660px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (max-width: 548px) {
+    grid-template-columns: 1fr;
+  }
+  @media screen and (max-width: 425px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;
 
 export const WrapperScils = styled.div`

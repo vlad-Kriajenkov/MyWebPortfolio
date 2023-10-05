@@ -9,7 +9,7 @@ export const Wrapper = styled.header`
 
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 426px) {
     justify-content: space-between;
   }
 `;
@@ -21,7 +21,7 @@ export const Name = styled.p`
   width: 21rem;
   padding: 0.75rem 1rem;
   color: #5565e8;
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 426px) {
     padding: 1.06rem 1.13rem;
   }
 `;
@@ -42,12 +42,9 @@ export const Nav = styled.nav`
   & :nth-of-type(3) {
     border-right: 1px solid ${myColor.border.primary};
   }
-  & :last-child {
-    margin-left: auto;
-    border-top-right-radius: 10px;
-  }
+  
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 426px) {
     position: absolute;
     top: -100dvh;
     left: 0;
@@ -58,29 +55,33 @@ export const Nav = styled.nav`
     & :nth-of-type(3) {
       border-right: none;
     }
-    & :last-child {
-      margin-left: 0px;
-    }
+   
     &.active {
       transform: translateY(106dvh);
-     
     }
   }
 `;
 export const Link = styled(NavLink)`
   font-size: 0.9rem;
   font-weight: 400;
-  display: inline-block;
-  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
   color: ${myColor.link.defoult};
   width: 10rem;
-  padding: 0.75rem 1rem;
+
   border-left: 1px solid ${myColor.border.primary};
   &.active {
     color: #fff;
     border-bottom: 3px solid ${myColor.border.active};
   }
-  @media screen and (max-width: 420px) {
+
+  @media screen and (max-width: 740px) {
+    width: 6.5rem;
+  }
+
+  @media screen and (max-width: 426px) {
     font-size: 1rem;
 
     width: 100%;

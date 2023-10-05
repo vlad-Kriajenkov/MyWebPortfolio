@@ -12,7 +12,7 @@ import { useMediaQuery } from 'react-responsive';
 
 const HomeNavigation = () => {
   const [handelBurger, setHandelBurger] = useState(false);
-  const isMobile = useMediaQuery({ query: '(max-width: 420px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 426px)' });
   const bodyEl = document.getElementsByTagName('body')[0];
   const hadelMenu = () => {
     setHandelBurger(!handelBurger);
@@ -51,9 +51,6 @@ const HomeNavigation = () => {
           <Link onClick={closeBurger} to="/progect">
             _progect
           </Link>
-          <Link onClick={closeBurger} to="/contact">
-            _contact-me
-          </Link>
         </Nav>
       </Wrapper>
     );
@@ -71,9 +68,6 @@ const HomeNavigation = () => {
           </Link>
           <Link onClick={closeBurger} to="/progect">
             _progect
-          </Link>
-          <Link onClick={closeBurger} to="/contact">
-            _contact-me
           </Link>
         </Nav>
       </Wrapper>

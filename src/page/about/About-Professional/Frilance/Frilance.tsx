@@ -1,18 +1,17 @@
 import React from 'react';
+import { CardItem, CardContent } from 'components';
 import { nanoid } from 'nanoid';
-import { Container, WrapperCard } from './Frilance.styled';
-import { CardInfo, PageName } from 'components';
-import ExpData from 'assets/json/experiance.json';
+import expData from 'assets/json/experiance.json';
 const Frilance = () => {
-  const { frilance } = ExpData;
-
+  const newExpData = expData.filter(
+    ({ placeWork }) => placeWork === 'frilance'
+  );
   return (
-    <Container>
-      <PageName lable="Frilance" />
-      <WrapperCard>
-        {frilance.map(({ positioned, time, stac, responsibility }) => {
+    <>
+      <CardItem btnNamePageClose="Frilance">
+        {newExpData.map(({ positioned, time, stac, responsibility }) => {
           return (
-            <CardInfo
+            <CardContent
               key={nanoid()}
               positioned={positioned}
               time={time}
@@ -21,9 +20,9 @@ const Frilance = () => {
             />
           );
         })}
-      </WrapperCard>
-    </Container>
-  ); 
+      </CardItem>
+    </>
+  );
 };
 
 export { Frilance };

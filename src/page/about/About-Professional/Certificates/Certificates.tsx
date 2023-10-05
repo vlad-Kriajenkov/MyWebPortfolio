@@ -1,15 +1,12 @@
 import React from 'react';
 import { Conatiner, WrapperCard } from './Certificates.styled';
-import { PageName } from 'components';
-import { CardCertificats } from 'components/CardCertificats/CardCertificats';
+import {  CardItem } from 'components';
+import { CardCertificats } from 'components/Cards/CardCertificats';
 const Certificates = () => {
   return (
-    <Conatiner>
-      <PageName lable="certificates" />
-      <WrapperCard>
-        <CardCertificats />
-      </WrapperCard>
-    </Conatiner>
+    <CardItem btnNamePageClose="certificates">
+      <CardCertificats />
+    </CardItem>
   );
 };
 
