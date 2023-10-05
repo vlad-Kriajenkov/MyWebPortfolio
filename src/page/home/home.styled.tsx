@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 426px) {
     /* height: 100%; */
     grid-template-columns: 1fr;
     background-image: url(${BackgroundBlurs});
@@ -38,7 +38,7 @@ export const About = styled.div`
     font-size: 2rem;
     font-weight: 400;
   }
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 426px) {
     padding: 1.69rem;
     width: 100%;
     p {
@@ -64,7 +64,7 @@ export const Animation = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 426px) {
     display: none;
   }
   div {

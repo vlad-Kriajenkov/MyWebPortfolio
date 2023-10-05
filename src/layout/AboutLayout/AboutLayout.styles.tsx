@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 export const Conatainer = styled.div`
   display: flex;
   flex-grow: 1;
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 426px) {
     flex-direction: column;
   }
 `;
@@ -16,7 +16,7 @@ export const Nav = styled.nav`
   flex-direction: column;
   border-right: 1px solid ${myColor.border.primary};
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 426px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     border-right: none;
@@ -35,7 +35,7 @@ export const Link = styled(NavLink)`
     height: 1.5rem;
   }
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 426px) {
     text-align: center;
     padding: 0.25rem 0rem;
     :first-of-type {
