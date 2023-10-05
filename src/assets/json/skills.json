@@ -4,7 +4,7 @@
   { "name": "HTML5", "nameIcon": "#icon-Html5", "top": "44%", "left": "8%" },
   { "name": "CSS", "nameIcon": "#icon-Css3", "top": "63%", "left": "12%" },
 
-  { "name": "JavaScripr", "nameIcon": "#icon-Js", "top": "24%",  "left": "24%" },
+  { "name": "JavaScript", "nameIcon": "#icon-Js", "top": "24%",  "left": "24%" },
   {
     "name": "TypeScript",
     "nameIcon": "#icon-Typescript",
