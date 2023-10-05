@@ -4,7 +4,7 @@ import { myColor } from 'assets/colors/colors';
 export const Container = styled.div`
   display: flex;
   flex-grow: 1;
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 426px) {
     flex-direction: column;
   }
 `;
@@ -15,7 +15,7 @@ export const WrapperFilter = styled.div`
 
 export const WrapperCgeckBox = styled.div`
   padding: 1rem;
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 426px) {
     border-bottom: 1px solid ${myColor.border.primary};
   }
 `;
@@ -25,7 +25,7 @@ export const WrapperProject = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 426px) {
     grid-template-columns: 1fr;
   }
 `;

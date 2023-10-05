@@ -75,7 +75,6 @@ const Projets = () => {
         </MenuDropdown>
       </WrapperFilter>
 
-      {/* <PageNameLayout name="projets-info"></PageNameLayout> */}
 
       <WrapperProject>
         {filterSetings.length === 0 ? (
