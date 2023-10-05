@@ -11,12 +11,15 @@ const CheckBox = (props: Props) => {
   const [isChecked, setChecked] = useState(false);
 
   return (
-    <Wrapper onClick={() => handelEven(label)}>
+    <Wrapper>
       <Label>
         <input
           className={isChecked ? 'checked' : ''}
           type="checkbox"
           onChange={() => setChecked(!isChecked)}
+          onClick={e => {
+            handelEven(label);
+          }}
         />
         <svg>
           <use href={Sprite + `${idIcon}`}></use>
