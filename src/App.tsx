@@ -19,7 +19,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomeLayout />}>
         <Route index element={<Home />} />
-        <Route path="about" element={<AboutLayout />}>
+        <Route path="/about" element={<AboutLayout />}>
           <Route path="professional" element={<AboutProfessionalLayout />}>
             <Route path="frilance" element={<Frilance />} />
             <Route path="cpaecom" element={<Cpaecom />} />
@@ -30,8 +30,8 @@ function App() {
             <Route path="about_me" element={<AboutMe />} />
           </Route>
         </Route>
-        <Route path="progect" element={<Projets />} />
-        <Route path="progect/:id" element={<ProjectID />} />
+        <Route path="/progect" element={<Projets />} />
+        <Route path="/progect/:id" element={<ProjectID />} />
       </Route>
     </Routes>
   );
