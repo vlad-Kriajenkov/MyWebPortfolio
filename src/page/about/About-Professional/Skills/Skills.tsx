@@ -7,7 +7,7 @@ import {
   WrapperScils,
   FlexBox,
 } from './Skills.styled';
-import { ButtonBack, IconSkill, PageName } from 'components';
+import { ButtonBack, IconSkill } from 'components';
 import skillsData from 'assets/json/skills.json';
 import { nanoid } from 'nanoid';
 import { useMediaQuery } from 'react-responsive';
@@ -20,7 +20,7 @@ const Skills = () => {
   if (isTablet) {
     return (
       <Container>
-        <PageName lable="All" />
+        <ButtonBack contentText="All" />
         <FlexBox>
           {skillsData.map(({ name, nameIcon }) => {
             return (
