@@ -11,18 +11,18 @@ import {
 import { useMediaQuery } from 'react-responsive';
 
 const HomeNavigation = () => {
-  const [handelBurger, setHandelBurger] = useState(false);
+  const [handleBurger, sethandleBurger] = useState(false);
   const isMobile = useMediaQuery({ query: '(max-width: 426px)' });
   const bodyEl = document.getElementsByTagName('body')[0];
   const hadelMenu = () => {
-    setHandelBurger(!handelBurger);
+    sethandleBurger(!handleBurger);
 
-    handelBurger === true
+    handleBurger === true
       ? (bodyEl.style.overflowY = 'auto')
       : (bodyEl.style.overflowY = 'hidden');
   };
   const closeBurger = () => {
-    setHandelBurger(false);
+    sethandleBurger(false);
     bodyEl.style.overflowY = 'auto';
   };
 
@@ -31,7 +31,7 @@ const HomeNavigation = () => {
       <Wrapper>
         <Name>krajenkov-vladislav</Name>
 
-        {handelBurger ? (
+        {handleBurger ? (
           <WrapperBurger>
             <IoMdClose onClick={hadelMenu} width="1.2rem" />
           </WrapperBurger>
@@ -41,7 +41,7 @@ const HomeNavigation = () => {
           </WrapperBurger>
         )}
 
-        <Nav className={handelBurger ? 'active' : ''}>
+        <Nav className={handleBurger ? 'active' : ''}>
           <Link onClick={closeBurger} to="/">
             _home
           </Link>
@@ -59,16 +59,10 @@ const HomeNavigation = () => {
       <Wrapper>
         <Name>krajenkov-vladislav</Name>
 
-        <Nav className={handelBurger ? 'active' : ''}>
-          <Link onClick={closeBurger} to="/">
-            _home
-          </Link>
-          <Link onClick={closeBurger} to="/about">
-            _about
-          </Link>
-          <Link onClick={closeBurger} to="/progect">
-            _progect
-          </Link>
+        <Nav className={handleBurger ? 'active' : ''}>
+          <Link to="/">_home</Link>
+          <Link to="/about">_about</Link>
+          <Link to="/progect">_progect</Link>
         </Nav>
       </Wrapper>
     );
