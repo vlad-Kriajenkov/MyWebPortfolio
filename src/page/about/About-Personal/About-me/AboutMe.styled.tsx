@@ -3,13 +3,20 @@ import { myColor } from 'assets/colors/colors';
 export const FlexBox = styled.div`
   display: flex;
   flex-direction: column;
+  button {
+    p {
+      padding: 0.4rem 0.08rem;
+    }
+  }
 `;
 
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100%;
+  border-top: 1px solid ${myColor.border.primary};
   @media screen and (max-width: 426px) {
+    border-top: 1px solid ${myColor.border.primary};
     display: flex;
     flex-direction: column;
   }
@@ -51,4 +58,4 @@ export const List = styled.ul`
     font-size: 1.2rem;
     color: ${myColor.text.seconder};
   }
-`;
+`; 
