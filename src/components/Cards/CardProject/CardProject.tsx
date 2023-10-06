@@ -12,7 +12,7 @@ import { BiLogoVuejs } from 'react-icons/bi';
 import { NavLink } from 'react-router-dom';
 
 interface Props {
-  id: number; 
+  id: number;
   nameProject: string;
   info: {
     frameWork: string;
@@ -21,19 +21,22 @@ interface Props {
 
 const CardProject = (props: Props) => {
   const { id, nameProject, info } = props;
-
+  const handleLinkPageBack = (flag: string) => {
+    localStorage.setItem('Page', `${flag}`);
+  };
   return (
     <Card>
       <div>
         <WrapperImg>
-          {/* <img src={ImgProject} alt="ImgProject" /> */}
           <WrapperIcon>
             {info.frameWork === 'react' ? <DiReact /> : <BiLogoVuejs />}
           </WrapperIcon>
         </WrapperImg>
         <WrapperInfo>
           <h2>{nameProject}</h2>
-          <NavLink to={`${id}`}>view-project</NavLink>
+          <NavLink to={`${id}`} onClick={() => handleLinkPageBack('/progect')}>
+            view-project
+          </NavLink>
         </WrapperInfo>
       </div>
     </Card>
