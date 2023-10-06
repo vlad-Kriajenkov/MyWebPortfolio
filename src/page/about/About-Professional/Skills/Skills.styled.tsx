@@ -8,6 +8,9 @@ export const Container = styled.div`
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 425px) {
+    border-top: 1px solid ${myColor.border.primary};
+  }
 `;
 
 export const Back = styled.div`
@@ -40,6 +43,7 @@ export const Wrapper = styled.div`
 export const FlexBox = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  border-top: 1px solid ${myColor.border.primary};
   @media screen and (max-width: 660px) {
     grid-template-columns: 1fr 1fr;
   }
