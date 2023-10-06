@@ -8,9 +8,9 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  // <React.StrictMode>
-    <BrowserRouter basename="/MyWebPortfolio">
+  <React.StrictMode>
+    <BrowserRouter basename="/MyWebPortfolio" future={{ v7_startTransition: true }}>
       <App />
     </BrowserRouter>
-  // </React.StrictMode>
+  </React.StrictMode>
 );
