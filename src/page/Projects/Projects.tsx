@@ -27,7 +27,7 @@ const Projets = () => {
   const [filterSetings, setFilterSetings] = useState<string[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<Item[]>([]);
 
-  const handelEven = useCallback(
+  const handleEven = useCallback(
     (nameFilter: string) => {
       const filterDublicate = filterSetings.includes(nameFilter);
 
@@ -67,14 +67,13 @@ const Projets = () => {
                   key={name}
                   label={name}
                   idIcon={nameIcon}
-                  handelEven={handelEven}
+                  handleEven={handleEven}
                 />
               );
             })}
           </WrapperCgeckBox>
         </MenuDropdown>
       </WrapperFilter>
-
 
       <WrapperProject>
         {filterSetings.length === 0 ? (

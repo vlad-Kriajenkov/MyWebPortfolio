@@ -4,10 +4,10 @@ import { Wrapper, Label } from './CheckBox.styled';
 type Props = {
   label: string;
   idIcon: string;
-  handelEven: any;
+  handleEven: any;
 };
 const CheckBox = (props: Props) => {
-  const { label, idIcon, handelEven } = props;
+  const { label, idIcon, handleEven } = props;
   const [isChecked, setChecked] = useState(false);
 
   return (
@@ -18,7 +18,7 @@ const CheckBox = (props: Props) => {
           type="checkbox"
           onChange={() => setChecked(!isChecked)}
           onClick={e => {
-            handelEven(label);
+            handleEven(label);
           }}
         />
         <svg>
