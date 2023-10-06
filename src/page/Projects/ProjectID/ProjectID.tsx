@@ -14,7 +14,8 @@ import {
 import { useParams } from 'react-router-dom';
 import ProjetArray from 'assets/json/project.json';
 import { nanoid } from 'nanoid';
-import { PageName } from 'components';
+import { ButtonBack } from 'components';
+ 
 
 interface Item {
   id: number;
@@ -38,7 +39,7 @@ const ProjectID = () => {
 
   return (
     <Container>
-      <PageName lable="Back" />
+      <ButtonBack contentText='Back'/>
       <ContainerProjectInfo>
         <WrapperInfo>
           <div>

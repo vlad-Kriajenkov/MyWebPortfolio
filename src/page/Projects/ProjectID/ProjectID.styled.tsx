@@ -9,7 +9,8 @@ export const ContainerProjectInfo = styled.div`
  
   display: grid;
   grid-template-columns: 1fr 1fr;
-height: 100%;
+height: 100%; 
+border-top: 1px solid ${myColor.border.primary};
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
 
