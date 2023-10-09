@@ -8,6 +8,9 @@ export const FlexBox = styled.div`
       padding: 0.4rem 0.08rem;
     }
   }
+  @media screen and (max-width: 425px) {
+    border-top: 1px solid ${myColor.border.primary};
+  }
 `;
 
 export const Container = styled.div`
@@ -58,4 +61,4 @@ export const List = styled.ul`
     font-size: 1.2rem;
     color: ${myColor.text.seconder};
   }
-`; 
+`;
