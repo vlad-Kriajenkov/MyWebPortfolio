@@ -25,4 +25,4 @@ const Frilance = () => {
   );
 };
 
-export { Frilance };
+export default Frilance ;

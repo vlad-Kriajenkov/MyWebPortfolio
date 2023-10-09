@@ -27,6 +27,4 @@ const AboutLayout = () => {
     </Conatainer>
   );
 };
-
-export { AboutLayout };
- 
+export default AboutLayout;

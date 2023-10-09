@@ -25,4 +25,4 @@ const Cpaecom = () => {
   );
 };
 
-export { Cpaecom };
+export default Cpaecom ;

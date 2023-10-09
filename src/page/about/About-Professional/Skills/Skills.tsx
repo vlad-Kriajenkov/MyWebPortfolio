@@ -61,4 +61,4 @@ const Skills = () => {
     </Container>
   );
 };
-export { Skills };
+export default Skills;

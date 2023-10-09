@@ -1,6 +1,6 @@
 import React from 'react';
- 
-import {  CardItem } from 'components';
+
+import { CardItem } from 'components';
 import { CardCertificats } from 'components/Cards/CardCertificats';
 const Certificates = () => {
   return (
@@ -10,4 +10,4 @@ const Certificates = () => {
   );
 };
 
-export { Certificates };
+export default Certificates;

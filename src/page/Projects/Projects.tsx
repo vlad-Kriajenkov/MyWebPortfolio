@@ -1,3 +1,4 @@
+import React, { useCallback, useEffect, useState } from 'react';
 import { CardProject, CheckBox, MenuDropdown } from 'components';
 import {
   Container,
@@ -7,9 +8,9 @@ import {
   WrapperFilter,
   WrapperCgeckBox,
 } from './Projects.styled';
-import React, { useCallback, useEffect, useState } from 'react';
 import IconArrya from 'assets/json/icon.json';
 import ProjectArrya from 'assets/json/project.json';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 interface Item {
   id: number;
@@ -24,33 +25,41 @@ interface Item {
 }
 
 const Projets = () => {
+  const navigation = useNavigate();
   const [filterSetings, setFilterSetings] = useState<string[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<Item[]>([]);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [filterCheckActive, setfilterCheckActive] = useState<
+    string[] | undefined
+  >([]);
+  console.log(filterSetings);
+  console.log(filteredProjects);
+ 
+  const handleEven = (nameSkills: string) => {
+    const filterDublicate = filterSetings.includes(nameSkills);
 
-  const handleEven = useCallback(
-    (nameFilter: string) => {
-      const filterDublicate = filterSetings.includes(nameFilter);
-
-      if (filterDublicate) {
-        setFilterSetings(filterSetings.filter(item => item !== nameFilter));
-        return;
-      } else {
-        setFilterSetings([...filterSetings, nameFilter]);
-        return;
-      }
-    },
-    [filterSetings]
-  );
-
+    if (filterDublicate) {
+      setFilterSetings(filterSetings.filter(item => item !== nameSkills));
+      navigation(
+        `?filter=${filterSetings.filter(item => item !== nameSkills)}`
+      );
+      return;
+    } else {
+      navigation(`?filter=${[...filterSetings, nameSkills]}`);
+      setFilterSetings([...filterSetings, nameSkills]);
+      return;
+    }
+  };
   useEffect(() => {
+    const filterParms = searchParams.get('filter');
+    const filters = filterParms?.split(',');
+    setfilterCheckActive(filters);
     const arrays = ProjectArrya.filter(item =>
-      item.info.technology.some(technology =>
-        filterSetings.includes(technology)
-      )
+      item.info.technology.some(technology => filters?.includes(technology))
     );
 
     setFilteredProjects(arrays);
-  }, [filterSetings]);
+  }, [searchParams]);
 
   return (
     <Container>
@@ -68,6 +77,7 @@ const Projets = () => {
                   label={name}
                   idIcon={nameIcon}
                   handleEven={handleEven}
+                  filterCheckActive={filterCheckActive}
                 />
               );
             })}
