@@ -3,55 +3,63 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoMdClose } from 'react-icons/io';
 import {
   Wrapper,
+  WrapperMenuMob,
   Link,
-  WrapperBurger,
   Nav,
   Name,
+  ButtonClose,
+  ButtonOpen,
 } from './HomeNavigation.styled';
 import { useMediaQuery } from 'react-responsive';
+import { Modal } from 'components';
+import { HomeFooter } from '../HomeFooter';
 
 const HomeNavigation = () => {
   const [handleBurger, sethandleBurger] = useState(false);
   const isMobile = useMediaQuery({ query: '(max-width: 426px)' });
+
   const bodyEl = document.getElementsByTagName('body')[0];
   const hadelMenu = () => {
     sethandleBurger(!handleBurger);
+    console.log(handleBurger);
 
     handleBurger === true
-      ? (bodyEl.style.overflowY = 'auto')
-      : (bodyEl.style.overflowY = 'hidden');
-  };
-  const closeBurger = () => {
-    sethandleBurger(false);
-    bodyEl.style.overflowY = 'auto';
+      ? (bodyEl.style.overflow = 'auto')
+      : (bodyEl.style.overflow = 'hidden');
   };
 
   if (isMobile) {
     return (
       <Wrapper>
         <Name>krajenkov-vladislav</Name>
+        <ButtonOpen>
+          <RxHamburgerMenu onClick={hadelMenu} />
+        </ButtonOpen>
 
-        {handleBurger ? (
-          <WrapperBurger>
+        <Modal handleBurger={handleBurger}>
+          <WrapperMenuMob>
+            <div>
+              <Name>krajenkov-vladislav</Name>
+
+              <Nav>
+                <Link onClick={hadelMenu} to="/">
+                  _home
+                </Link>
+                <Link onClick={hadelMenu} to="/about">
+                  _about
+                </Link>
+                <Link onClick={hadelMenu} to="/progect">
+                  _progect
+                </Link>
+              </Nav>
+            </div>
+
+            <HomeFooter />
+          </WrapperMenuMob>
+          <ButtonClose>
             <IoMdClose onClick={hadelMenu} width="1.2rem" />
-          </WrapperBurger>
-        ) : (
-          <WrapperBurger>
-            <RxHamburgerMenu onClick={hadelMenu} />
-          </WrapperBurger>
-        )}
-
-        <Nav className={handleBurger ? 'active' : ''}>
-          <Link onClick={closeBurger} to="/">
-            _home
-          </Link>
-          <Link onClick={closeBurger} to="/about">
-            _about
-          </Link>
-          <Link onClick={closeBurger} to="/progect">
-            _progect
-          </Link>
-        </Nav>
+          </ButtonClose>
+        </Modal>
       </Wrapper>
     );
   } else {

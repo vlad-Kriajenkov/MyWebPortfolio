@@ -26,7 +26,7 @@ export const Name = styled.p`
   }
 `;
 
-export const WrapperBurger = styled.div`
+const WrapperBurger = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,29 +35,45 @@ export const WrapperBurger = styled.div`
     font-size: 2.4rem;
   }
 `;
+export const ButtonOpen = styled(WrapperBurger)`
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-10px, 5px);
+`;
 
+export const ButtonClose = styled(WrapperBurger)`
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-10px, 5px);
+`;
+export const WrapperMenuMob = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  height: 100dvh;
+  /* padding-top: 40px; */
+  background-color: ${myColor.backGraund.main};
+  border: 1px solid ${myColor.border.primary};
+  border-radius: 10px;
+`;
 export const Nav = styled.nav`
   display: flex;
   width: 100%;
   & :nth-of-type(3) {
     border-right: 1px solid ${myColor.border.primary};
   }
-  
 
   @media screen and (max-width: 426px) {
-    position: absolute;
-    top: -100dvh;
-    left: 0;
-    z-index: 2;
     flex-direction: column;
-    height: 85dvh;
-    background-color: ${myColor.backGraund.main};
+    :first-of-type {
+      border-top: 1px solid ${myColor.border.primary};
+    }
     & :nth-of-type(3) {
       border-right: none;
-    }
-   
-    &.active {
-      transform: translateY(106dvh);
     }
   }
 `;
