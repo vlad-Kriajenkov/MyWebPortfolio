@@ -7,8 +7,8 @@ const AboutLayout = React.lazy(() => import('layout/AboutLayout/AboutLayout'));
 const AboutProfessionalLayout = React.lazy(
   () => import('layout/AboutProfessionalLayout/AboutProfessionalLayout')
 );
-const Frilance = React.lazy(
-  () => import('page/about/About-Professional/Frilance/Frilance')
+const Freelance = React.lazy(
+  () => import('page/about/About-Professional/Freelance/Freelance')
 );
 const Cpaecom = React.lazy(
   () => import('page/about/About-Professional/Cpaecom/Cpaecom')
@@ -35,7 +35,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/about" element={<AboutLayout />}>
           <Route path="professional" element={<AboutProfessionalLayout />}>
-            <Route path="frilance" element={<Frilance />} />
+            <Route path="freelance" element={<Freelance />} />
             <Route path="cpaecom" element={<Cpaecom />} />
             <Route path="skills" element={<Skills />} />
             <Route path="certificates" element={<Certificates />} />

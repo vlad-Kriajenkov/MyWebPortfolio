@@ -2,7 +2,7 @@
   {
     "name": "experience",
     "info": [
-      { "patch": "frilance", "name": "Frilance" },
+      { "patch": "freelance", "name": "Freelance" },
       { "patch": "cpaecom", "name": "Cpaecom" }
     ]
   },
@@ -15,4 +15,3 @@
     "info": [{ "patch": "certificates", "name": "Certificates" }]
   }
 ]
-
