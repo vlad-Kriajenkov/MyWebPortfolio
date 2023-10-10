@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Sprite from 'assets/img/skills/sprite.svg';
 import { Wrapper, Label } from './CheckBox.styled';
+import { useSearchParams } from 'react-router-dom';
 type Props = {
   label: string;
   idIcon: string;
@@ -9,6 +10,15 @@ type Props = {
 const CheckBox = (props: Props) => {
   const { label, idIcon, handleEven } = props;
   const [isChecked, setChecked] = useState(false);
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const filterParms = searchParams.get('filter')?.split(',');
+    filterParms?.forEach(item => {
+      if (item === label) setChecked(true);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Wrapper>
@@ -17,7 +27,7 @@ const CheckBox = (props: Props) => {
           className={isChecked ? 'checked' : ''}
           type="checkbox"
           onChange={() => setChecked(!isChecked)}
-          onClick={e => {
+          onClick={() => {
             handleEven(label);
           }}
         />
