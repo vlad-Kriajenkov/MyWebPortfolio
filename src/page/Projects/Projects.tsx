@@ -29,7 +29,17 @@ const Projets: FC = () => {
   const [filteredProjects, setFilteredProjects] = useState<Item[]>([]);
   const [searchParams, setSearchParams] = useSearchParams();
 
-  
+  useEffect(() => {
+    const filterParms = searchParams.get('filter')?.split(',');
+
+    if (filterParms === undefined || filterParms[0] === '') {
+      setSearchParams({ filter: `${filter}` });
+    } else {
+      setFilter(filterParms);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const handleEven = (skills: string) => {
     const dublicateSkills = filter?.includes(skills);
 
@@ -42,7 +52,8 @@ const Projets: FC = () => {
 
   useEffect(() => {
     setSearchParams({ filter: `${filter}` });
-  }, [filter, setSearchParams]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filter]);
 
   useEffect(() => {
     const filterParms = searchParams.get('filter')?.split(',');
