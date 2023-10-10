@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { CardProject, CheckBox, MenuDropdown } from 'components';
 import {
   Container,
@@ -10,7 +10,7 @@ import {
 } from './Projects.styled';
 import IconArrya from 'assets/json/icon.json';
 import ProjectArrya from 'assets/json/project.json';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 interface Item {
   id: number;
@@ -24,40 +24,31 @@ interface Item {
   };
 }
 
-const Projets = () => {
-  const navigation = useNavigate();
-  const [filterSetings, setFilterSetings] = useState<string[]>([]);
+const Projets: FC = () => {
+  const [filter, setFilter] = useState<string[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<Item[]>([]);
   const [searchParams, setSearchParams] = useSearchParams();
-  const [filterCheckActive, setfilterCheckActive] = useState<
-    string[] | undefined
-  >([]);
-  console.log(filterSetings);
-  console.log(filteredProjects);
- 
-  const handleEven = (nameSkills: string) => {
-    const filterDublicate = filterSetings.includes(nameSkills);
 
-    if (filterDublicate) {
-      setFilterSetings(filterSetings.filter(item => item !== nameSkills));
-      navigation(
-        `?filter=${filterSetings.filter(item => item !== nameSkills)}`
-      );
-      return;
+  
+  const handleEven = (skills: string) => {
+    const dublicateSkills = filter?.includes(skills);
+
+    if (dublicateSkills) {
+      setFilter(prevState => prevState.filter(item => item !== skills));
     } else {
-      navigation(`?filter=${[...filterSetings, nameSkills]}`);
-      setFilterSetings([...filterSetings, nameSkills]);
-      return;
+      setFilter(prevState => [...prevState, skills]);
     }
   };
-  useEffect(() => {
-    const filterParms = searchParams.get('filter');
-    const filters = filterParms?.split(',');
-    setfilterCheckActive(filters);
-    const arrays = ProjectArrya.filter(item =>
-      item.info.technology.some(technology => filters?.includes(technology))
-    );
 
+  useEffect(() => {
+    setSearchParams({ filter: `${filter}` });
+  }, [filter, setSearchParams]);
+
+  useEffect(() => {
+    const filterParms = searchParams.get('filter')?.split(',');
+    const arrays = ProjectArrya.filter(item =>
+      item.info.technology.some(technology => filterParms?.includes(technology))
+    );
     setFilteredProjects(arrays);
   }, [searchParams]);
 
@@ -77,7 +68,6 @@ const Projets = () => {
                   label={name}
                   idIcon={nameIcon}
                   handleEven={handleEven}
-                  filterCheckActive={filterCheckActive}
                 />
               );
             })}
@@ -86,7 +76,7 @@ const Projets = () => {
       </WrapperFilter>
 
       <WrapperProject>
-        {filterSetings.length === 0 ? (
+        {filter.length === 0 ? (
           ProjectArrya.map(({ id, nameProject, info }) => {
             return (
               <Box key={id}>
