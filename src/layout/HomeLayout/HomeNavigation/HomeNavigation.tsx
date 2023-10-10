@@ -48,8 +48,8 @@ const HomeNavigation = () => {
                 <Link onClick={hadelMenu} to="/about">
                   _about
                 </Link>
-                <Link onClick={hadelMenu} to="/progect">
-                  _progect
+                <Link onClick={hadelMenu} to="/project">
+                  _project
                 </Link>
               </Nav>
             </div>
@@ -70,7 +70,7 @@ const HomeNavigation = () => {
         <Nav className={handleBurger ? 'active' : ''}>
           <Link to="/">_home</Link>
           <Link to="/about">_about</Link>
-          <Link to="/progect">_progect</Link>
+          <Link to="/project">_project</Link>
         </Nav>
       </Wrapper>
     );

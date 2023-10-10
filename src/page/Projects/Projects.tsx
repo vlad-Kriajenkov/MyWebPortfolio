@@ -48,6 +48,7 @@ const Projets: FC = () => {
     } else {
       setFilter(prevState => [...prevState, skills]);
     }
+    
   };
 
   useEffect(() => {

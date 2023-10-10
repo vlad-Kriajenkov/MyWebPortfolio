@@ -28,7 +28,6 @@ const AboutMe = React.lazy(
 const Projets = React.lazy(() => import('page/Projects/Projects'));
 const ProjectID = React.lazy(() => import('page/Projects/ProjectID/ProjectID'));
 
-
 function App() {
   return (
     <Routes>
@@ -45,8 +44,8 @@ function App() {
             <Route path="about_me" element={<AboutMe />} />
           </Route>
         </Route>
-        <Route path="/progect" element={<Projets />} />
-        <Route path="/progect/:id" element={<ProjectID />} />
+        <Route path="/project" element={<Projets />} />
+        <Route path="/project/:id" element={<ProjectID />} />
       </Route>
     </Routes>
   );

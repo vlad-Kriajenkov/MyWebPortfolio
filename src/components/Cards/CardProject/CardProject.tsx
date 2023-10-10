@@ -34,7 +34,7 @@ const CardProject = (props: Props) => {
         </WrapperImg>
         <WrapperInfo>
           <h2>{nameProject}</h2>
-          <NavLink to={`${id}`} onClick={() => handleLinkPageBack('/progect')}>
+          <NavLink to={`${id}`} onClick={() => handleLinkPageBack('/project')}>
             view-project
           </NavLink>
         </WrapperInfo>
