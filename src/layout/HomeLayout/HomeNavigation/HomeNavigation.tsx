@@ -21,8 +21,6 @@ const HomeNavigation = () => {
   const bodyEl = document.getElementsByTagName('body')[0];
   const hadelMenu = () => {
     sethandleBurger(!handleBurger);
-    console.log(handleBurger);
-
     handleBurger === true
       ? (bodyEl.style.overflow = 'auto')
       : (bodyEl.style.overflow = 'hidden');
