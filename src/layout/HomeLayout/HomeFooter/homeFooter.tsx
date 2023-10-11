@@ -3,10 +3,17 @@ import { Container, ListMedia, Title, Link } from './homeFooter.styled';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 import { BsTelegram } from 'react-icons/bs';
 import { BiLogoGmail } from 'react-icons/bi';
+import { useMediaQuery } from 'react-responsive';
 const HomeFooter = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 426px)' });
   return (
     <Container>
-      <Title>find me in:</Title>
+      {isMobile ? (
+        <Title>Find me:</Title>
+      ) : (
+        <Title>Find me in my social:</Title>
+      )}
+
       <ListMedia>
         <li>
           <Link
