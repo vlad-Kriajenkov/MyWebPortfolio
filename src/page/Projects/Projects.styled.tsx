@@ -2,10 +2,11 @@ import styled from '@emotion/styled';
 import { myColor } from 'assets/colors/colors';
 
 export const Container = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 17.99rem 1fr;
   flex-grow: 1;
   @media screen and (max-width: 426px) {
-    flex-direction: column;
+    grid-template-columns: none;
   }
 `;
 

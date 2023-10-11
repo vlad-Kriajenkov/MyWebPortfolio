@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { myColor } from 'assets/colors/colors';
 export const Wrapper = styled.header`
   position: relative;
-  display: flex;
+  display:  grid;
+  grid-template-columns: 17.95rem 1fr;
 
   border-bottom: 1px solid ${myColor.border.primary};
 
@@ -18,7 +19,7 @@ export const Name = styled.p`
   font-size: 0.9rem;
   font-weight: 400;
 
-  width: 21rem;
+ 
   padding: 0.75rem 1rem;
   color: #5565e8;
   @media screen and (max-width: 426px) {

@@ -10,7 +10,10 @@ export const Conatainer = styled.div`
   border-radius: 10px;
 
   main {
-    display: flex;
+    /* display: flex; */
+    
+    display: grid;
     flex: 1 0 auto;
   }
 `;
+ 

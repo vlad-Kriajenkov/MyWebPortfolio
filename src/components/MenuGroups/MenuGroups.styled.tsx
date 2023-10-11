@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 import { myColor } from 'assets/colors/colors';
 
 export const Container = styled.div`
-  display: flex;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 14rem 1fr;
   @media screen and (max-width: 426px) {
     display: block;
   }

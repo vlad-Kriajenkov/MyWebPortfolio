@@ -9,7 +9,7 @@ export const Control = styled.button`
   display: flex;
   align-items: center;
 
-  width: 12.78rem;
+  width: 100%;
 
   background: none;
 
@@ -34,9 +34,6 @@ export const Control = styled.button`
     border-bottom: none;
     margin: 0.25rem 0rem;
     padding-left: 1rem;
-  }
-  @media screen and (max-width: 426px) {
-    width: 100%;
   }
 `;
 

@@ -5,7 +5,8 @@ import BackImg from 'assets/img/skills/back.jpeg';
 
 export const Container = styled.div`
   position: relative;
-  flex: 1 0 auto;
+  /* flex: 1 0 auto; */
+  width: 100%;
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 425px) {
@@ -14,7 +15,9 @@ export const Container = styled.div`
 `;
 
 export const Back = styled.div`
-  flex: 1 0 auto;
+  /* flex: 1 0 auto; */
+  width: 100%;
+  height: 100%;
   border-top: 1px solid ${myColor.border.primary};
   background-image: url(${BackImg});
   background-repeat: no-repeat;

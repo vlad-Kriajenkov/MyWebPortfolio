@@ -3,10 +3,11 @@ import { myColor } from 'assets/colors/colors';
 import { NavLink } from 'react-router-dom';
 
 export const Conatainer = styled.div`
-  display: flex;
-  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 4rem 1fr;
   @media screen and (max-width: 426px) {
-    flex-direction: column;
+    grid-template-columns: none;
+    grid-template-rows: 2rem 1fr;
   }
 `;
 
@@ -19,14 +20,20 @@ export const Nav = styled.nav`
   @media screen and (max-width: 426px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    align-items: center;
     border-right: none;
     border-bottom: 1px solid ${myColor.border.primary};
   }
 `;
 
 export const Link = styled(NavLink)`
+display: flex;
+align-items: center;
+justify-content: center;
+
+
   color: ${myColor.link.active};
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
   &.active {
     color: ${myColor.link.defoult};
   }
@@ -37,7 +44,8 @@ export const Link = styled(NavLink)`
 
   @media screen and (max-width: 426px) {
     text-align: center;
-    padding: 0.25rem 0rem;
+    height: 100%;
+    padding: 0rem;
     :first-of-type {
       border-right: 1px solid ${myColor.border.primary};
     }

@@ -29,11 +29,14 @@ export const ListMedia = styled.ul`
 export const Title = styled.p`
   display: flex;
   align-items: center;
-  justify-content: center;
-
+   
+  width: 18rem;
   padding: 0.75rem 1rem;
   color: ${myColor.text.accent};
   border-right: 1px solid ${myColor.border.primary};
+  @media screen and (max-width: 425px) {
+    width: auto;
+  }
 `;
 
 export const Link = styled.a`
