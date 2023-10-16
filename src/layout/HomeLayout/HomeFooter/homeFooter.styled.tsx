@@ -21,7 +21,7 @@ export const ListMedia = styled.ul`
     border-right: 1px solid ${myColor.border.primary};
     padding: 10px;
     @media screen and (max-width: 425px) {
-      padding: 10px 18px;
+      padding: 8px 8px;
     }
   }
 `;
