@@ -22,7 +22,7 @@ const AboutMe = () => {
         setArryNumber(arr);
       }
     };
-    genereiteArryNumber(17);
+    genereiteArryNumber(29);
   }, []);
 
   return (
@@ -40,11 +40,24 @@ const AboutMe = () => {
             <Title> About me</Title>
 
             <Text>
-              I have 1 year and 6 months of IT experience under my belt. During
-              this time I realized 3 projects on Freelance, two projects were
-              made for Ukraine, 1 for UK. More than a year worked in a company
-              on the position of HTML-Delevoper. I work fully on two frameworks
-              (Vue / React). In my spare time I do my own pet-projects
+              Hello, I'm Krajenkov Vlad, a passionate front-end web developer
+              with expertise in tools and technologies like React, Redux
+              Toolkit, Vue(2), Vuex, TypeScript, Material UI, and CSS3.
+              <br /> <br />
+              With a solid foundation in front-end development, I specialize in
+              creating intuitive and user-friendly interfaces, developing
+              responsive web applications, integrating APIs and optimizing
+              performance through efficient code implementation.
+              <br />
+              <br />I thrive incollaborative environments and enjoy working
+              withmultidisciplinary teams to solve complex problems and deliver
+              high-quality solutions. With a keen eye for detail and a passion
+              for continuous learning, I am committed to delivering exceptional
+              results.
+              <br />
+              <br />
+              Let's connect! Feel free to reach out to explore potential
+              collaborations or discuss how we can drive innovation together.
             </Text>
           </div>
         </Wrapper>
