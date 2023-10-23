@@ -27,7 +27,7 @@ const AboutMe = () => {
 
   return (
     <FlexBox>
-      <ButtonBack contentText="About-me" />
+      <ButtonBack contentText="About-me" navigationPage='/about'/>
       <Container>
         <Wrapper>
           <Number>

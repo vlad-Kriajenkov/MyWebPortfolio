@@ -8,7 +8,7 @@ const Cpaecom = () => {
   );
   return (
     <>
-      <CardItem btnNamePageClose="Capecom">
+      <CardItem btnNamePageClose="Capecom" nameLinkBackPage="/about">
         {newExpData.map(({ positioned, time, stac, responsibility }) => {
           return (
             <CardContent

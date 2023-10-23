@@ -20,7 +20,7 @@ const Skills = () => {
   if (isTablet) {
     return (
       <Container>
-        <ButtonBack contentText="All" />
+        <ButtonBack contentText="All" navigationPage="/about" />
         <FlexBox>
           {skillsData.map(({ name, nameIcon }) => {
             return (
@@ -39,7 +39,7 @@ const Skills = () => {
 
   return (
     <Container>
-      <ButtonBack contentText="All" />
+      <ButtonBack contentText="All" navigationPage="/about" />
 
       <Back>
         <SkillAll>
