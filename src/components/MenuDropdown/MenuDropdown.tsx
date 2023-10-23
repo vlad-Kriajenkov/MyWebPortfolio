@@ -27,10 +27,7 @@ const MenuDropdown = ({
 
   return (
     <>
-      <Control
-        onClick={togelOpen}
-        className={liClass}
-      >
+      <Control onClick={togelOpen} className={liClass}>
         {titlePageLink ? (
           isOpen ? (
             <BoxTitlePageIcon>
