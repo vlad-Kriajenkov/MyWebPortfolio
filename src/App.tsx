@@ -4,27 +4,15 @@ import { Route, Routes } from 'react-router-dom';
 const HomeLayout = React.lazy(() => import('layout/HomeLayout/HomeLayout'));
 const Home = React.lazy(() => import('./page/home/Home'));
 const AboutLayout = React.lazy(() => import('layout/AboutLayout/AboutLayout'));
-const AboutProfessionalLayout = React.lazy(
-  () => import('layout/AboutProfessionalLayout/AboutProfessionalLayout')
-);
-const Freelance = React.lazy(
-  () => import('page/about/About-Professional/Freelance/Freelance')
-);
-const Cpaecom = React.lazy(
-  () => import('page/about/About-Professional/Cpaecom/Cpaecom')
-);
-const Skills = React.lazy(
-  () => import('page/about/About-Professional/Skills/Skills')
-);
+
+const Freelance = React.lazy(() => import('page/about/Freelance/Freelance'));
+const Cpaecom = React.lazy(() => import('page/about/Cpaecom/Cpaecom'));
+const Skills = React.lazy(() => import('page/about/Skills/Skills'));
 const Certificates = React.lazy(
-  () => import('page/about/About-Professional/Certificates/Certificates')
+  () => import('page/about/Certificates/Certificates')
 );
-const AboutPersonalLayout = React.lazy(
-  () => import('layout/AboutPersonalLayout/AboutPersonalLayout')
-);
-const AboutMe = React.lazy(
-  () => import('page/about/About-Personal/About-me/AboutMe')
-);
+
+const AboutMe = React.lazy(() => import('page/about/About-me/AboutMe'));
 const Projets = React.lazy(() => import('page/Projects/Projects'));
 const ProjectID = React.lazy(() => import('page/Projects/ProjectID/ProjectID'));
 
@@ -34,15 +22,11 @@ function App() {
       <Route path="/" element={<HomeLayout />}>
         <Route index element={<Home />} />
         <Route path="/about" element={<AboutLayout />}>
-          <Route path="professional" element={<AboutProfessionalLayout />}>
-            <Route path="freelance" element={<Freelance />} />
-            <Route path="cpaecom" element={<Cpaecom />} />
-            <Route path="skills" element={<Skills />} />
-            <Route path="certificates" element={<Certificates />} />
-          </Route>
-          <Route path="personal" element={<AboutPersonalLayout />}>
-            <Route path="about_me" element={<AboutMe />} />
-          </Route>
+          <Route path="freelance" element={<Freelance />} />
+          <Route path="cpaecom" element={<Cpaecom />} />
+          <Route path="skills" element={<Skills />} />
+          <Route path="certificates" element={<Certificates />} />
+          <Route path="about_me" element={<AboutMe />} />
         </Route>
         <Route path="/project" element={<Projets />} />
         <Route path="/project/:id" element={<ProjectID />} />
