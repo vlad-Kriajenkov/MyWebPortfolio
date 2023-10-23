@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Button, Name, WrapperIcon } from './ButtonBack.styled';
 import { IoClose } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
