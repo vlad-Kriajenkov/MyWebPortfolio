@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkMyWebPortfolio=self.webpackChunkMyWebPortfolio||[]).push([[229],{2229:function(e,n,o){o.r(n),o.d(n,{default:function(){return a}});var t=o(5224),r=JSON.parse('[{"name":"About-me","info":[{"patch":"about_me","name":"About-me"}]}]'),u=o(184),a=function(){return(0,u.jsx)(t.Dl,{linkArray:r,lable:"personl-info"})}}}]);
-//# sourceMappingURL=229.81a2692f.chunk.js.map

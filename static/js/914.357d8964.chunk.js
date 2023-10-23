@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkMyWebPortfolio=self.webpackChunkMyWebPortfolio||[]).push([[914],{7914:function(e,t,s){s.r(t);s(2791);var n=s(5224),o=s(8789),r=s(184);t.default=function(){return(0,r.jsx)(n.Ss,{btnNamePageClose:"certificates",children:(0,r.jsx)(o.K,{})})}}}]);
-//# sourceMappingURL=914.357d8964.chunk.js.map

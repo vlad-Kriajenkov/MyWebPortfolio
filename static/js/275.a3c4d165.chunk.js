@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkMyWebPortfolio=self.webpackChunkMyWebPortfolio||[]).push([[275],{8275:function(e,t,a){a.r(t);a(2791);var n=a(5224),o=a(8789),s=a(184);t.default=function(){return(0,s.jsx)(n.Ss,{btnNamePageClose:"certificates",nameLinkBackPage:"/about",children:(0,s.jsx)(o.K,{})})}}}]);
+//# sourceMappingURL=275.a3c4d165.chunk.js.map
