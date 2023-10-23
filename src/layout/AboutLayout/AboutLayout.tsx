@@ -1,29 +1,20 @@
 import React from 'react';
 import { Outlet } from 'react-router';
-import { MdFolderShared, MdFolderSpecial } from 'react-icons/md';
-import { Conatainer, Nav, Link } from './AboutLayout.styles';
+import { Conatainer, Nav } from './AboutLayout.styles';
+import { MenuGroups } from 'components';
+import linkPersonal from 'assets/json/linkPersonal.json';
+import linkProfessional from 'assets/json/linkProfessional.json';
 
 const AboutLayout = () => {
-  const handleLinkPageBack = (flag: string) => {
-    localStorage.setItem('Page', `${flag}`);
-  };
   return (
     <Conatainer>
       <Nav>
-        <Link
-          to="/about/professional"
-          onClick={() => handleLinkPageBack('/about/professional')}
-        >
-          <MdFolderSpecial />
-        </Link>
-        <Link
-          to="/about/personal"
-          onClick={() => handleLinkPageBack('/about/personal')}
-        >
-          <MdFolderShared />
-        </Link>
+        <MenuGroups linkArray={linkPersonal} lable="personl-info" />
+        <MenuGroups linkArray={linkProfessional} lable="professional-info" />
       </Nav>
-      <Outlet />
+      <div>
+        <Outlet />
+      </div>
     </Conatainer>
   );
 };
