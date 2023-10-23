@@ -39,7 +39,7 @@ const ProjectID = () => {
 
   return (
     <Container>
-      <ButtonBack contentText='Back'/>
+      <ButtonBack contentText='Back' navigationPage='project'/>
       <ContainerProjectInfo>
         <WrapperInfo>
           <div>

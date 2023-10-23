@@ -5,11 +5,19 @@ import { ButtonBack } from 'components';
 
 interface Props {
   btnNamePageClose: string;
+  nameLinkBackPage: string;
 }
-const CardItem = ({ btnNamePageClose, children }: PropsWithChildren<Props>) => {
+const CardItem = ({
+  btnNamePageClose,
+  nameLinkBackPage,
+  children,
+}: PropsWithChildren<Props>) => {
   return (
     <Container>
-      <ButtonBack contentText={btnNamePageClose} />
+      <ButtonBack
+        contentText={btnNamePageClose}
+        navigationPage={nameLinkBackPage}
+      />
       <WrapperCard>{children}</WrapperCard>
     </Container>
   );
